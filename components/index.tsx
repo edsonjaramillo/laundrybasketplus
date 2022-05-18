@@ -3,6 +3,7 @@ export { default as Section } from '@/components/shared/Section';
 export { default as Footer } from '@/components/shared/Footer';
 export { default as HeadOpenGraph } from '@/components/shared/HeadOpenGraph';
 export { default as BlurImage } from '@/components/shared/BlurImage';
+export { default as LaundryBasketLogo } from '@/components/shared/LaundryBasketLogo';
 
 export { default as CTA } from '@/components/home/CTA';
 export { default as Location } from '@/components/home/Location';
