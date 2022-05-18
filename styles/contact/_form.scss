@@ -114,7 +114,7 @@
     @include input-size(1rem);
     border: 1px solid $grayscale-500;
     color: $grayscale-700;
-    font-family: $font-family !important;
+    font-family: $font-family, sans-serif;
     font-weight: 400;
 
     &:focus {
