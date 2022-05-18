@@ -1,0 +1,21 @@
+.aboutus {
+  padding: $section-padding;
+  background-color: $brand-secondary-300;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    color: $grayscale-100;
+  }
+
+  &__header {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    font-weight: 600;
+  }
+
+  &__subheader {
+    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+    font-weight: 500;
+  }
+}
