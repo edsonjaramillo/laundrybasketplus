@@ -111,7 +111,7 @@ hr {
 
 .navbar {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   padding: 0.5rem 0;
@@ -135,6 +135,7 @@ hr {
 }
 .navbar__logo {
   margin: auto 0;
+  max-width: 6.5rem;
 }
 .navbar__content {
   display: flex;
@@ -514,6 +515,10 @@ hr {
   opacity: 1;
 }
 
+.logo__primary {
+  fill: #16304b;
+}
+
 .cta {
   height: clamp(60vh, 60vw, 80vh);
   position: relative;
@@ -597,7 +602,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  max-width: 37rem;
+  max-width: 39.5rem;
   margin: auto;
   color: #ffffff;
 }
@@ -647,7 +652,7 @@ hr {
 }
 
 .locationsection {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: clamp(3.5rem, 2.5vw, 6rem);
   background-color: #ebf4fa;
 }
 .locationsection__header {
@@ -675,7 +680,7 @@ hr {
   font-weight: 600;
 }
 .aboutus__subheader {
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: 500;
 }
 
@@ -800,6 +805,9 @@ hr {
   flex-direction: column;
   gap: 1rem;
   padding: clamp(2rem, 2.5vw, 2.75rem) 0rem;
+}
+.apply__logo {
+  max-width: 6.5rem;
 }
 .apply__header {
   display: flex;
