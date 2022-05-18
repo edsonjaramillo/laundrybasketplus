@@ -26,6 +26,7 @@ const StorePage = ({ store }: StorePageProps) => {
             alt={store.image.alt}
             width={store.image.width}
             height={store.image.height}
+            quality={35}
             layout='responsive'
           />
         </div>
