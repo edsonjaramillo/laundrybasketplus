@@ -15,7 +15,7 @@ const Location = ({ store, isReverse }: HomeStoresProps) => {
   return (
     <div className={`location ${bgColor}`}>
       <div className={`location__image ${imagePosition}`}>
-        <BlurImage src={store.image.url} alt={store.image.alt} layout='fill' objectFit='cover' />
+        <BlurImage src={store.image.url} alt={store.image.alt} layout='fill' objectFit='cover' quality={35} />
       </div>
       <div className='location__information'>
         <h3 className='location__header'>{store.name}</h3>
