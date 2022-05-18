@@ -1,12 +1,8 @@
 $icon-size: 2.75rem;
-$navbar-bg: rgba(
-  $color: $grayscale-100,
-  $alpha: 0.85,
-);
 
 .navbar {
   width: 100%;
-  background-color: $navbar-bg;
+  background-color: $grayscale-100;
   position: fixed;
   top: 0;
   padding: 0.5rem 0;
@@ -30,6 +26,7 @@ $navbar-bg: rgba(
 
   &__logo {
     margin: auto 0;
+    max-width: 6.5rem;
   }
 
   &__content {
