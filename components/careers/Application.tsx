@@ -16,8 +16,7 @@ const Application = ({ title }: ApplicationProps) => {
     reset,
   } = useForm();
 
-  const onSubmit = async (data:any) => {
-    
+  const onSubmit = async (data: any) => {
     const { name } = data;
 
     const templateParameters = {
