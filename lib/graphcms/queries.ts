@@ -9,7 +9,7 @@ export const getHomepageProps = gql`
       slug
       image {
         id
-        url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+        url(transformation: { image: { resize: { fit: clip, width: 600 } } })
         alt
       }
       hasExternalPage
@@ -37,7 +37,7 @@ export const getStores = gql`
       slug
       image {
         id
-        url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+        url(transformation: { image: { resize: { fit: clip, width: 600 } } })
         alt
       }
       address {
@@ -65,7 +65,7 @@ export const getStore = gql`
       slug
       image {
         id
-        url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+        url(transformation: { image: { resize: { fit: clip, width: 600 } } })
         width
         height
         alt
