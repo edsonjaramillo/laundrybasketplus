@@ -3,6 +3,10 @@
   flex-direction: column;
   gap: 1rem;
   padding: $section-padding;
+
+  &__logo {
+    max-width: 6.5rem;
+  }
   &__header {
     display: flex;
     flex-direction: column;
