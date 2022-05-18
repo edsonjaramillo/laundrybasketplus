@@ -114,7 +114,8 @@
     @include input-size(1rem);
     border: 1px solid $grayscale-500;
     color: $grayscale-700;
-    font-family: $font-family;
+    font-family: $font-family !important;
+    font-weight: 400;
 
     &:focus {
       background-color: lighten($color: $state-info, $amount: 35%);
