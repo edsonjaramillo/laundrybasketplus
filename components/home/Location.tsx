@@ -43,7 +43,7 @@ const InternalLink = (link: LinkProps) => (
 
 const ExternalLink = (link: LinkProps) => (
   <a
-    rel='noopener external'
+    rel='noopener nofollow noreferrer external'
     target='_blank'
     href={link.href}
     className={`location__link ${link.textColor}`}>
