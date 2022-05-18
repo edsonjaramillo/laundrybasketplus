@@ -1,19 +1,34 @@
 {
   "name": "laundrybasketplus",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap --config next-sitemap-config.js",
+    "format": "prettier --write .",
+    "sass": "sass --watch --error-css --no-source-map styles/main.scss styles/main.css"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "^0.5.0",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^6.2.8",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.1.0",
+    "js-cookie": "^3.0.1",
     "next": "12.1.6",
+    "next-sitemap": "^2.5.20",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-hook-form": "^7.27.1",
+    "react-toastify": "^8.2.0",
+    "sharp": "^0.30.3"
   },
   "devDependencies": {
+    "@graphcms/rich-text-types": "^0.3.1",
+    "@types/js-cookie": "^3.0.1",
     "@types/node": "17.0.33",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.4",
