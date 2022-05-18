@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    max-width: 37rem;
+    max-width: 39.5rem;
     margin: auto;
     color: $grayscale-100;
   }
@@ -75,7 +75,7 @@
 }
 
 .locationsection {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: clamp(3.5rem, 2.5vw, 6rem);
   background-color: $brand-secondary-100;
 
   &__header {
