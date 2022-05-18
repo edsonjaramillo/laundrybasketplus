@@ -80,7 +80,7 @@ const Application = ({ title }: ApplicationProps) => {
             id='date'
             name='date'
             type='date'
-            placeholder='0123456789'
+            value={new Date().toISOString().split('T')[0]}
             register={register}
             validation={validationDate}
           />
