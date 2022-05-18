@@ -2,14 +2,22 @@ import { gql } from 'graphql-request';
 
 export const getHomepageProps = gql`
   query getHomepageProps {
+<<<<<<< HEAD
     stores(orderBy: sort_ASC) {
+=======
+    stores {
+>>>>>>> ef6284a3ce8bf3ea7bffa921633ad9629165f57c
       id
       name
       description
       slug
       image {
         id
+<<<<<<< HEAD
         url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+=======
+        url
+>>>>>>> ef6284a3ce8bf3ea7bffa921633ad9629165f57c
         alt
       }
       hasExternalPage
@@ -37,7 +45,11 @@ export const getStores = gql`
       slug
       image {
         id
+<<<<<<< HEAD
         url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+=======
+        url
+>>>>>>> ef6284a3ce8bf3ea7bffa921633ad9629165f57c
         alt
       }
       address {
@@ -65,7 +77,11 @@ export const getStore = gql`
       slug
       image {
         id
+<<<<<<< HEAD
         url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+=======
+        url
+>>>>>>> ef6284a3ce8bf3ea7bffa921633ad9629165f57c
         width
         height
         alt

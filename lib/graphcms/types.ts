@@ -37,7 +37,6 @@ export interface JobListingType {
   article: RichTextType;
   store: StoreType;
 }
-
 interface RichTextType {
   raw: any[];
 }
