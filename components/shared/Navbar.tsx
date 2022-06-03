@@ -14,6 +14,10 @@ export const navbarLinks = [
     name: 'Locations',
   },
   {
+    slug: '/#aboutus',
+    name: 'About',
+  },
+  {
     slug: '/contact',
     name: 'Contact',
   },
