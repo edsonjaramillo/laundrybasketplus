@@ -8,20 +8,17 @@ export const getHomepageProps = gql`
       description
       slug
       image {
-        id
-        url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+        url(transformation: { image: { resize: { fit: clip, width: 1000 } } })
         alt
       }
       hasExternalPage
       externalUrl
     }
     callToAction(where: { id: "cl3ak154l759w0bk747xcq2s3" }) {
-      id
       header
       subheader
     }
     aboutus(where: { id: "cl3aktuhi7tat0bk7w4fsvbcn" }) {
-      id
       header
       subheader
     }
@@ -37,7 +34,7 @@ export const getStores = gql`
       slug
       image {
         id
-        url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+        url(transformation: { image: { resize: { fit: clip, width: 1000 } } })
         alt
       }
       address {
@@ -65,7 +62,7 @@ export const getStore = gql`
       slug
       image {
         id
-        url(transformation: { image: { resize: { fit: clip, width: 800 } } })
+        url(transformation: { image: { resize: { fit: clip, width: 1000 } } })
         width
         height
         alt
