@@ -538,7 +538,7 @@ hr {
 }
 @media (min-width: 769px) {
   .location {
-    height: 35rem;
+    height: 37rem;
     grid-template-columns: repeat(2, 1fr);
   }
   .location__information {
@@ -568,6 +568,7 @@ hr {
 .aboutus {
   padding: clamp(2rem, 2.5vw, 2.75rem) 0rem;
   background-color: #5f7881;
+  scroll-margin-top: 3rem;
 }
 .aboutus__content {
   display: flex;
@@ -590,13 +591,18 @@ hr {
   flex-direction: column;
   gap: 1rem;
 }
+.store__location {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #007db8;
+}
 .store__h1 {
-  font-size: clamp(2.25rem, 4vw, 2.75rem);
+  font-size: clamp(2.25rem, 4vw, 2.5rem);
   font-weight: 700;
   color: #16304b;
 }
 .store__h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #16304b;
 }
