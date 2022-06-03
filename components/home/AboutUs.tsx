@@ -1,7 +1,7 @@
 import { AboutUsType } from '@/lib/graphcms/types';
 
 const AboutUs = ({ header, subheader }: AboutUsType) => (
-  <div className='aboutus'>
+  <div id='aboutus' className='aboutus'>
     <div className='aboutus__content responsive-width-cta'>
       <h2 className='aboutus__header'>{header}</h2>
       <span className='aboutus__subheader'>{subheader}</span>
