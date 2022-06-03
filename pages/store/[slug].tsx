@@ -19,20 +19,20 @@ const StorePage = ({ store }: StorePageProps) => {
       />
       <div className='store responsive-width-store'>
         <h1 className='store__h1'>{store.name}</h1>
-        <span>{`${store.address.city}, ${store.address.state}`}</span>
+        <span className='store__location'>{`${store.address.city}, ${store.address.state}`}</span>
         <div className='store__image'>
           <BlurImage
             src={store.image.url}
             alt={store.image.alt}
             width={store.image.width}
             height={store.image.height}
-            quality={35}
+            quality={65}
             layout='responsive'
+            priority
           />
         </div>
         <p className='store__p'>{store.description}</p>
         <StoreRichTextRenderer content={store.article.raw} />
-        {/* <pre>{JSON.stringify(store, null, 2)}</pre> */}
       </div>
     </>
   );
