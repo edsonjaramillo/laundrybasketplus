@@ -1,9 +1,9 @@
-import { GetServerSideProps, GetServerSidePropsContext } from 'next';
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { hourlyFormat } from '@/components/careers/JobPosting';
 import { Application, LaundryBasketLogo } from '@/components/index';
 import { JobListingRichTextRenderer, JobListingJSONLD } from '@/components/index';
 import { JobListingType } from '@/lib/graphcms/types';
-import { getJobListing } from '@/lib/graphcms/queries';
+import { getJobListing, getJobListingSlugs } from '@/lib/graphcms/queries';
 import { graphCMSClient } from '@/lib/graphcms/client';
 
 interface ApplyPageProps {
@@ -69,13 +69,26 @@ const ListItem = ({ title, message }: JobListItemType) => (
   </li>
 );
 
-export const getServerSideProps: GetServerSideProps = async (ctx: GetServerSidePropsContext) => {
-  const { id } = ctx.query;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { joblistings } = await graphCMSClient.request(getJobListingSlugs);
 
-  const { joblisting } = await graphCMSClient.request(getJobListing, { id });
+  const paths = joblistings.map((job: any) => ({
+    params: { id: job.id },
+  }));
 
   return {
-    props: { joblisting },
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (ctx: GetStaticPropsContext) => {
+  const { id } = ctx.params as { id: string };
+
+  const { store } = await graphCMSClient.request(getJobListing, { id });
+
+  return {
+    props: { store },
   };
 };
 

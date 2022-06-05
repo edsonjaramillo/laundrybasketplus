@@ -2,7 +2,7 @@ import { navbarLinks } from '@/components/shared/Navbar';
 import { graphCMSClient } from '@/lib/graphcms/client';
 import { getSitemapLinks } from '@/lib/graphcms/queries';
 import { StoreType, JobListingType } from '@/lib/graphcms/types';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, GetStaticProps } from 'next';
 import Link from 'next/link';
 
 interface SitemapPageProps {
@@ -64,7 +64,7 @@ const SitemapLink = ({ slug, name }: SitemapLinkProps) => (
   </Link>
 );
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const { stores, joblistings } = await graphCMSClient.request(getSitemapLinks);
 
   return {

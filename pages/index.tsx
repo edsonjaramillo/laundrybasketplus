@@ -2,7 +2,7 @@ import { CTA, HeadOpenGraph, LocationSection, AboutUs } from '@/components/index
 import { graphCMSClient } from '@/lib/graphcms/client';
 import { getHomepageProps } from '@/lib/graphcms/queries';
 import { AboutUsType, CTAType, StoreType } from '@/lib/graphcms/types';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, GetStaticProps } from 'next';
 
 interface HomepageProps {
   stores: StoreType[];
@@ -24,7 +24,7 @@ const Home = ({ stores, callToAction, aboutus }: HomepageProps) => (
   </>
 );
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const { stores, callToAction, aboutus } = await graphCMSClient.request(getHomepageProps);
 
   return {

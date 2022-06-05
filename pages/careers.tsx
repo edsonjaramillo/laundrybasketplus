@@ -2,7 +2,7 @@ import { JobPosting } from '@/components/index';
 import { graphCMSClient } from '@/lib/graphcms/client';
 import { getJobListings } from '@/lib/graphcms/queries';
 import { JobListingType } from '@/lib/graphcms/types';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 
 interface JobListingPageProps {
   joblistings: JobListingType[];
@@ -23,7 +23,7 @@ const CareersPage = ({ joblistings }: JobListingPageProps) => (
   </section>
 );
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const { joblistings } = await graphCMSClient.request(getJobListings);
 
   return {

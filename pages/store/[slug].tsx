@@ -1,8 +1,8 @@
 import { StoreRichTextRenderer, BlurImage, HeadOpenGraph } from '@/components/index';
 import { graphCMSClient } from '@/lib/graphcms/client';
-import { getStore } from '@/lib/graphcms/queries';
+import { getStore, getStoreSlugs } from '@/lib/graphcms/queries';
 import { StoreType } from '@/lib/graphcms/types';
-import { GetServerSideProps, GetServerSidePropsContext } from 'next';
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 
 interface StorePageProps {
   store: StoreType;
@@ -38,8 +38,21 @@ const StorePage = ({ store }: StorePageProps) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx: GetServerSidePropsContext) => {
-  const { slug } = ctx.query;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { stores } = await graphCMSClient.request(getStoreSlugs);
+
+  const paths = stores.map((store: any) => ({
+    params: { slug: store.slug },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (ctx: GetStaticPropsContext) => {
+  const { slug } = ctx.params as { slug: string };
 
   const { store } = await graphCMSClient.request(getStore, { slug });
 
