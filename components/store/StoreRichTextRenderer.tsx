@@ -26,7 +26,14 @@ const richTextOverrides: NodeRendererType = {
   code_block: ({ children }) => <pre className='store__codeblock'>{children}</pre>,
   img: ({ src, width, height, altText }) => (
     <div className='store__image'>
-      <BlurImage src={src!} width={width} height={height} layout='responsive' alt={altText} quality={45} />
+      <BlurImage
+        src={src!}
+        width={width}
+        height={height}
+        layout='responsive'
+        alt={altText}
+        quality={15}
+      />
     </div>
   ),
 };
@@ -34,4 +41,5 @@ const richTextOverrides: NodeRendererType = {
 const RichTextRender = ({ content }: RichTextRenderProps) => (
   <RichText content={content} renderers={richTextOverrides} />
 );
+
 export default RichTextRender;
