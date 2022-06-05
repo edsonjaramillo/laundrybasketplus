@@ -150,3 +150,20 @@ export const getSitemapLinks = gql`
     }
   }
 `;
+
+export const getStoreSlugs = gql`
+  query getStoreSlugs {
+    stores {
+      id
+      slug
+    }
+  }
+`;
+
+export const getJobListingSlugs = gql`
+  query getJobListingSlugs {
+    joblistings {
+      id
+    }
+  }
+`;
