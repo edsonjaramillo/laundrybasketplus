@@ -6,8 +6,7 @@ const LaundryBasketLogo = () => (
     height='100%'
     viewBox='0 0 1919.000000 673.000000'
     preserveAspectRatio='xMidYMid meet'
-    className='logo__primary'
-    aria-label='Laundry Basket Logo'>
+    className='logo__primary'>
     <g transform='translate(0.000000,673.000000) scale(0.100000,-0.100000)' stroke='none'>
       <path
         d='M12345 6365 c-121 -7 -289 -16 -372 -21 l-153 -7 0 -1229 0 -1228
