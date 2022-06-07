@@ -12,7 +12,7 @@ const StorePage = ({ store }: StorePageProps) => {
   return (
     <>
       <HeadOpenGraph
-        title={store.name}
+        title={`${store.name} in ${store.address.city}, ${store.address.state}`}
         description={store.description}
         image={store.image.url}
         alt={store.description}
