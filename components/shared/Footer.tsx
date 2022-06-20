@@ -91,8 +91,7 @@ const FooterSocialIcon = ({ href, name, children }: FooterSocialIconProps) => (
     className='footer__socialicon'
     target='_blank'
     rel='noreferrer noopener external nofollow'
-    aria-label={`Link to ${name} profile`}
-    title={`Link to ${name} profile`}>
+    aria-label={`Link to ${name} profile`}>
     {children}
   </a>
 );
