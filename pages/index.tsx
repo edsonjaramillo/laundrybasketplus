@@ -2,7 +2,7 @@ import { CTA, HeadOpenGraph, LocationSection, AboutUs } from '@/components/index
 import { graphCMSClient } from '@/lib/graphcms/client';
 import { getHomepageProps } from '@/lib/graphcms/queries';
 import { AboutUsType, CTAType, StoreType } from '@/lib/graphcms/types';
-import { GetServerSideProps, GetStaticProps } from 'next';
+import { GetStaticProps } from 'next';
 
 interface HomepageProps {
   stores: StoreType[];
