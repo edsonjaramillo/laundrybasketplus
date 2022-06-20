@@ -13,7 +13,7 @@ interface HomepageProps {
 const Home = ({ stores, callToAction, aboutus }: HomepageProps) => (
   <>
     <HeadOpenGraph
-      title='Homepage'
+      title={callToAction.header}
       description={aboutus.subheader}
       image='https://media.graphassets.com/rGIffdyDQHSL0ePjy3ti'
       alt='Laundry Basket Plus logo'
