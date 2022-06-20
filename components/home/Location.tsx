@@ -15,15 +15,21 @@ const Location = ({ store, isReverse }: HomeStoresProps) => {
   return (
     <div className={`location ${bgColor}`}>
       <div className={`location__image ${imagePosition}`}>
-        <BlurImage src={store.image.url} alt={store.name} layout='fill' objectFit='cover' quality={55} />
+        <BlurImage
+          src={store.image.url}
+          alt={store.name}
+          layout='fill'
+          objectFit='cover'
+          quality={55}
+        />
       </div>
       <div className='location__information'>
         <h3 className='location__header'>{store.name}</h3>
         <p className='location__subtext'>{store.description}</p>
         {store.hasExternalPage ? (
-          <ExternalLink href={store.externalUrl} textColor={textColor} />
+          <ExternalLink title={store.name} href={store.externalUrl} textColor={textColor} />
         ) : (
-          <InternalLink href={`store/${store.slug}`} textColor={textColor} />
+          <InternalLink title={store.name} href={`/store/${store.slug}`} textColor={textColor} />
         )}
       </div>
     </div>
@@ -31,18 +37,24 @@ const Location = ({ store, isReverse }: HomeStoresProps) => {
 };
 
 interface LinkProps {
+  title: string;
   href: string;
   textColor: string;
 }
 
 const InternalLink = (link: LinkProps) => (
   <Link href={link.href}>
-    <a className={`location__link ${link.textColor}`}>More Information</a>
+    <a
+      title={`More Information for ${link.title} location`}
+      className={`location__link ${link.textColor}`}>
+      More Information
+    </a>
   </Link>
 );
 
 const ExternalLink = (link: LinkProps) => (
   <a
+    title={`More Information for ${link.title} location`}
     rel='noopener nofollow noreferrer external'
     target='_blank'
     href={link.href}
@@ -50,10 +62,5 @@ const ExternalLink = (link: LinkProps) => (
     More Information
   </a>
 );
-
-const isExternalLink = (href: string) => {
-  const pattern = /^(http|https):\/\//;
-  return pattern.test(href);
-};
 
 export default Location;
