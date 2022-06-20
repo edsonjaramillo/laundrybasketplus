@@ -86,7 +86,7 @@ const Navbar = () => {
         <nav className='navbar'>
           <div className='navbar__content responsive-width'>
             <Link href='/'>
-              <a title='Homepage' className='navbar__logo'>
+              <a aria-label='Homepage' className='navbar__logo'>
                 <LaundryBasketLogo />
               </a>
             </Link>
