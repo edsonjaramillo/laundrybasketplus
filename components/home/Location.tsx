@@ -45,7 +45,7 @@ interface LinkProps {
 const InternalLink = (link: LinkProps) => (
   <Link href={link.href}>
     <a
-      title={`More Information for ${link.title} location`}
+      aria-label={`More Information for ${link.title} location`}
       className={`location__link ${link.textColor}`}>
       More Information
     </a>
@@ -54,7 +54,7 @@ const InternalLink = (link: LinkProps) => (
 
 const ExternalLink = (link: LinkProps) => (
   <a
-    title={`More Information for ${link.title} location`}
+    aria-label={`More Information for ${link.title} location`}
     rel='noopener nofollow noreferrer external'
     target='_blank'
     href={link.href}
