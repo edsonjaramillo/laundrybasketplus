@@ -101,14 +101,15 @@ body {
 
 	/* Brand */
 	--color-primary: var(--primary-800);
-	--color-primary-accent: var(--primary-6000);
+	--color-primary-accent: var(--primary-100);
+	--color-primary-neutral: var(--primary-500);
 	--color-primary-hover: var(--primary-900);
 	--color-primary-pressed: var(--primary-950);
 
 	/* Grayscale */
-	--color-gray: var(--gray-400);
+	--color-gray: var(--gray-500);
 	--color-black: var(--gray-900);
-	--color-white: var(--gray-100);
+	--color-white: var(--gray-50);
 	--color-muted: var(--gray-200);
 
 	/* Alert */
@@ -139,7 +140,7 @@ body {
 	/* --font-mono: var(--font-custom-mono), monospace; */
 
 	/* spacing */
-	--responsive-width: 75rem;
+	--responsive-width: 80rem;
 	--navigation-height: 3.5rem;
 	--half-responsive-width: calc(--responsive-width / 2);
 
