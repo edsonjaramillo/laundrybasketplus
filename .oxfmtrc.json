@@ -5,5 +5,9 @@
 	"useTabs": true,
 	"sortImports": true,
 	"sortPackageJson": true,
-	"bracketSameLine": true
+	"bracketSameLine": true,
+	"sortTailwindcss": {
+		"stylesheet": "./src/styles.css",
+		"functions": ["cn", "twMerge"]
+	}
 }
