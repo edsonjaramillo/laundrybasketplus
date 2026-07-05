@@ -15,6 +15,8 @@ export const textVariants = cva("antialiased", {
 			"2xl": "text-2xl",
 			"3xl": "text-3xl",
 			"4xl": "text-4xl",
+			"5xl": "text-5xl",
+			"6xl": "text-6xl",
 		},
 		tone: {
 			black: "text-black",
@@ -22,6 +24,7 @@ export const textVariants = cva("antialiased", {
 			muted: "text-muted",
 			white: "text-white",
 			primary: "text-primary",
+			["primary-neutral"]: "text-primary-neutral",
 			danger: "text-danger",
 		},
 	},

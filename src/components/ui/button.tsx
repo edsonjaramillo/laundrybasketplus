@@ -16,7 +16,10 @@ export const buttonVariants = cva(
 					"bg-danger text-white not-disabled:hover:bg-danger-hover not-disabled:focus:bg-danger-hover not-disabled:active:bg-danger-pressed",
 				success:
 					"bg-success text-white not-disabled:hover:bg-success-hover not-disabled:focus:bg-success-hover not-disabled:active:bg-success-pressed",
+				white:
+					"bg-white text-black not-disabled:hover:bg-muted not-disabled:focus:bg-muted not-disabled:active:bg-muted",
 			},
+
 			disabled: { true: "cursor-not-allowed bg-muted text-black" },
 			width: { fit: "w-fit", full: "w-full" },
 		},
