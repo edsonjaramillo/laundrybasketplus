@@ -2,6 +2,7 @@ import { TanStackDevtools } from "@tanstack/react-devtools";
 import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
+import { Footer } from "#/components/shared/footer";
 import { Navigation } from "#/components/shared/navigation";
 
 import appCss from "../styles.css?url";
@@ -27,6 +28,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<body className="relative isolate bg-white">
 				<Navigation />
 				{children}
+				<Footer />
 				<TanStackDevtools
 					config={{ position: "bottom-right" }}
 					plugins={[{ name: "Tanstack Router", render: <TanStackRouterDevtoolsPanel /> }]}
