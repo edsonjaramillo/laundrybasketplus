@@ -16,7 +16,7 @@ type SectionProps = SectionRequiredPropsProps & SectionVariants & React.Componen
 export function Section({ header, subheader, children, className, color, ...props }: SectionProps) {
 	const headerStyle = cn(sectionVariants({ color }));
 	return (
-		<div className={cn(headerStyle, className)} {...props}>
+		<section className={cn(headerStyle, className)} {...props}>
 			<div className="mx-auto w-responsive">
 				<div className="mb-10 flex flex-col gap-1">
 					<Span
@@ -31,6 +31,6 @@ export function Section({ header, subheader, children, className, color, ...prop
 				</div>
 				{children}
 			</div>
-		</div>
+		</section>
 	);
 }
